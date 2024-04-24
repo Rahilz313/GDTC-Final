@@ -1,4 +1,17 @@
-
+resource "aws_db_instance" "example" {
+  identifier             = "example-postgres"
+  allocated_storage      = 20
+  engine                 = "postgres"
+  engine_version         = "16.1"
+  instance_class         = "db.t3.micro"
+  username               = "rahil"
+  password               = "Rahil1234"
+  publicly_accessible    = true
+  multi_az               = false
+  final_snapshot_identifier = "my-final-snapshot"
+  skip_final_snapshot        = false
+}
+   
  
 
    
